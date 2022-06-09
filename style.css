@@ -1,0 +1,136 @@
+:root{
+  --header-height: 6rem;
+  --header-bottom-height: calc(var(--header-height) * 0.5);
+
+  --primary-color: #6e92de;
+}
+
+*{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/*HEADER*/
+header{
+  height: var(--header-height);
+  width: 100%;
+}
+
+.header-top{
+  width: 100%;
+  height: 50%;
+  padding: .3rem 1.5rem;
+
+  display: flex;
+  justify-content: space-between
+}
+
+.header-top .logo{
+  display: flex;
+  align-items: center;
+}
+
+.header-top .logo span{
+  font-size: 1.3rem;
+  margin-left: 10px;
+}
+
+.header-top .icons{
+  height: 100%;
+  display: flex;
+  align-items: center;
+
+}
+
+.header-top .icons svg{
+  width: auto;
+  height: 100%;
+}
+
+.header-top .icons .profile{
+  --icon-size: calc(var(--header-height) * 0.5 - .6rem);
+  margin-left: 15px;
+  color: white;
+  background-color: #455a64;
+  width: var(--icon-size);
+  height: var(--icon-size);
+  line-height: var(--icon-size);
+  text-align: center;
+  border-radius: 50%;
+  font-size: 1rem;
+}
+
+.header-bottom{
+  height: var(--header-bottom-height);
+  padding: 0 1.5rem;
+  border-bottom: 1px solid grey;
+  width: 100%;
+}
+
+.header-bottom .navbar{
+  height: 100%;
+  list-style-type: none;
+}
+
+.header-bottom .navbar li{
+  box-sizing: content-box;
+  display: inline-block;
+  color: black;
+  /* height: 100%;
+  vertical-align: middle; */
+  margin-right: 20px;
+  line-height: calc(var(--header-bottom-height) - 3px);
+}
+
+.header-bottom .navbar li.active{
+  color: var(--primary-color);
+  border-bottom: 3px solid var(--primary-color);
+}
+
+.header-bottom .navbar li a {
+  text-decoration: none;
+  color: inherit;
+}
+
+/* MAIN  */
+main{
+  padding-top: 100px;
+  line-height: 1.6;
+}
+
+main a{
+  text-decoration: none;
+  color: var(--primary-color);
+}
+
+.question{
+  width: 80%;
+  margin: 0 auto;
+  margin-bottom: 80px;
+}
+
+.question p,
+.question h2,
+.question h3,
+.question .answer > * {
+  margin-bottom: 25px;
+}
+
+.question .answer ol{
+  padding-left: 1rem;
+}
+
+.question .answer ol li{
+  margin-bottom: 10px;
+  padding-left: 15px;
+}
+
+.question .answer ol li ol{
+  margin-top: 10px;
+  list-style-type: lower-alpha;
+}
+
+.question .answer h3{
+  margin-top: 80px;
+}
